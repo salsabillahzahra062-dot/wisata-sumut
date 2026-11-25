@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eksplorasi Wisata Sumatera Utara</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <h1>Eksplorasi Sumatera Utara</h1>
+            <p>Katalog destinasi wisata alam, budaya, dan kuliner terbaik di Tanah Batak dan sekitarnya.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Bagian Kontrol Pencarian dan Filter -->
+        <section class="controls" aria-label="Pencarian dan Filter Destinasi">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Cari destinasi atau lokasi (cth: Danau Toba, Karo)..." aria-label="Cari destinasi">
+            </div>
+            <nav class="filter-buttons" aria-label="Filter Kategori">
+                <button class="filter-btn active" data-category="semua">Semua</button>
+                <button class="filter-btn" data-category="alam">Wisata Alam</button>
+                <button class="filter-btn" data-category="budaya">Budaya & Sejarah</button>
+                <button class="filter-btn" data-category="kuliner">Kuliner & Kota</button>
+            </nav>
+        </section>
+
+        <!-- Bagian Katalog Destinasi -->
+        <section id="catalogGrid" class="catalog-grid" aria-live="polite">
+            <!-- Kartu destinasi akan dirender otomatis melalui JavaScript -->
+        </section>
+
+        <!-- Pesan jika pencarian tidak ditemukan -->
+        <p id="emptyMessage" class="empty-message hidden">Destinasi tidak ditemukan. Coba kata kunci atau kategori lain.</p>
+    </main>
+
+    <!-- Modal Detail Destinasi -->
+    <dialog id="detailModal" class="modal">
+        <div class="modal-content">
+            <button id="closeModal" class="close-btn" aria-label="Tutup detail">&times;</button>
+            <img id="modalImg" src="" alt="">
+            <div class="modal-body">
+                <span id="modalCategory" class="badge"></span>
+                <h2 id="modalTitle"></h2>
+                <p id="modalLocation" class="location"></p>
+                <p id="modalDesc"></p>
+                <div class="modal-info">
+                    <strong>Jam Operasional:</strong> <span id="modalHours"></span><br>
+                    <strong>Estimasi Tiket:</strong> <span id="modalPrice"></span>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Katalog Wisata Sumatera Utara. Dibuat untuk Tugas Praktik Mini Web App.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
